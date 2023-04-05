@@ -28,6 +28,10 @@ app.get("/api/data/:id", (request, response) => {
   });
 });
 
+app.get("/health", (request, response) => {
+  return response.status(200).json({ status: "ok" })
+})
+
 const root = path.join('public', 'dist')
 app.get("*", function(req, res){
   fs.stat(root + req.path, function(err) {
