@@ -33,7 +33,7 @@ export default createStore({
     async getData({ commit }) {
       try {
         const response = await fetch(
-          "https://2zhcsdrvpp.eu-west-1.awsapprunner.com/api/data"
+          "https://tx4jcz8vkh.eu-west-1.awsapprunner.com/api/data"
         );
         const data = await response.json();
         if (!response || response.status !== 200) {
@@ -50,7 +50,7 @@ export default createStore({
     },
     async getDetail({ commit }, id) {
       try {
-        const response = await fetch(`https://2zhcsdrvpp.eu-west-1.awsapprunner.com/api/data/${id}`);
+        const response = await fetch(`https://tx4jcz8vkh.eu-west-1.awsapprunner.com/api/data/${id}`);
         if (!response || response.status !== 200) {
           throw new Error();
         }
@@ -65,7 +65,4 @@ export default createStore({
       }
     },
   },
-
-  modules: {
-  }
 })

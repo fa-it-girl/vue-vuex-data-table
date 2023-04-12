@@ -3,6 +3,7 @@ const fs = require('fs');
 const cors = require('cors');
 const app = express();
 const path = require('path')
+
 app.use(cors({
   origin: '*'
 }));
